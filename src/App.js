@@ -8,17 +8,17 @@ import Table from './components/Table';
 
 
 function App() {
-  let selectCheck =(select)=>{
+  // let selectCheck =(select)=>{
     
-      if (select ='pakistan'){
-        alert("Most welcome")
-        select =""
+  //     if (select ='pakistan'){
+  //       alert("Most welcome")
+  //       select =""
        
-    }
-    else{
-      alert("welcome")
-    }
-  }
+  //   }
+  //   else{
+  //     alert("welcome")
+  //   }
+  // }
   let inputText=(input)=>{
     console.log(input);
     
@@ -89,10 +89,18 @@ let data = [
             <Card id={x.id} name={x.name} key={i} age={x.age} isActive={x.isActive} />
           );
         })}
-    <Select seleted={selectCheck}/>
+      <Select lable="Gender"
+        option={[
+          {
+            Value: "male",
+                  displayName :"Female"
+          }
+        ]}/>
     {data.map((x, i) => {
           return (
-            <Table id={x.id} name={x.name} key={i} age={x.age}  />
+            <Table 
+            
+            />
           );
         })}
    
